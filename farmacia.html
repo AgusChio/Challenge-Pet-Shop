@@ -9,13 +9,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="app" class="d-flex align-items-center justify-content-center">
+    <section id="app" class="d-flex flex-column align-items-center justify-content-center">
+        {{filtrar}}
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+        v-model="textoInput" @keyup="filtrarMedicamentos">
+        <select class="form-select" aria-label="Default select example" v-model="seleccionada">
+            <option disabled value="">Ordenar</option>
+            <option>A-Z</option>
+            <option>Mayor precio</option>
+            <option>Menor precio</option>
+        </select>
         <div class="cards d-flex justify-content-center flex-wrap">
-            <div class="card" style="width: 18rem;" v-for="medicamento of medicamentos">
+            <div class="card" style="width: 18rem;" v-for="medicamento of medicamentosFiltrados">
                 <img :src="medicamento.imagen" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{medicamento.nombre}}</h5>
                   <p>Precio: ${{medicamento.precio}}</p>
+                  <p class="text-danger" v-if="medicamento.stock <=5">Ultimas unidades!!!</p>
                   <a href="#" class="btn btn-primary">Añadir al carrito</a>
                 </div>
             </div>

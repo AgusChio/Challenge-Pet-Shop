@@ -8,3 +8,6 @@ body {
 section {
     min-height: 100vh;
 }
+.form-control, .form-select {
+    width: 25% !important;
+}
