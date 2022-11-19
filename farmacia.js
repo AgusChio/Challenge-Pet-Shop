@@ -6,7 +6,8 @@ const app = createApp({
             medicamentos: [],
             medicamentosFiltrados: [],
             textoInput: '',
-            seleccionada: ''
+            seleccionada: '',
+            carrito: []
         }
     },
     created() {
@@ -33,6 +34,24 @@ const app = createApp({
                 /* this.medicamentosFiltrados = this.medicamentos.filter(medicamento => medicamento.stock > 5) */
             } else {
                 this.medicamentosFiltrados = this.medicamentos
+            }
+        },
+        agregarAlCarrito(medicamento) {
+            if (this.carrito.includes(medicamento)) {
+                const index = this.carrito.findIndex(med => med._id === medicamento._id)
+                console.log(index)
+                this.carrito[index].unidades += 1
+            } else {
+                medicamento.unidades = 1
+                this.carrito.push(medicamento)
+            }
+            console.log(this.carrito)
+        },
+        quitarUnidad(medicamento) {
+            const index = this.carrito.findIndex(med => med._id === medicamento._id)
+            this.carrito[index].unidades -= 1
+            if (!this.carrito[index].unidades) {
+                this.carrito.splice(index,1)
             }
         }
     },
