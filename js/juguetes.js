@@ -14,12 +14,16 @@ const app = createApp({
         fetch('https://apipetshop.herokuapp.com/api/articulos')
             .then(response => response.json())
             .then(data => {
-                this.obtenerMedicamentos(data.response)
+                this.obtenerJuguetes(data.response)
             })
             .catch(err => console.log(err))
+            this.carrito = JSON.parse(localStorage.getItem('carrito'))
+            if (!this.carrito) {
+                this.carrito = []
+            }
     },
     methods: {
-        obtenerMedicamentos(data) {
+        obtenerJuguetes(data) {
             this.juguetes = data.filter(elemento => elemento.tipo === "Juguete")
             this.juguetes = this.juguetes.sort((a, b) => a.nombre.localeCompare(b.nombre))
             this.juguetesFiltrados = this.juguetes
@@ -31,7 +35,6 @@ const app = createApp({
                 this.juguetesFiltrados = this.juguetes.filter(Juguete => {
                     return Juguete.nombre.toLowerCase().trim().includes(this.textoInput.toLowerCase().trim())
                 })
-                /* this.juguetesFiltrados = this.juguetes.filter(Juguete => Juguete.stock > 5) */
             } else {
                 this.juguetesFiltrados = this.juguetes
             }
@@ -45,7 +48,7 @@ const app = createApp({
                 Juguete.unidades = 1
                 this.carrito.push(Juguete)
             }
-            console.log(this.carrito)
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
         },
         quitarUnidad(Juguete) {
             const index = this.carrito.findIndex(med => med._id === Juguete._id)
@@ -53,6 +56,12 @@ const app = createApp({
             if (!this.carrito[index].unidades) {
                 this.carrito.splice(index,1)
             }
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
+        },
+        quitarElemento(Juguete) {
+            const index = this.carrito.findIndex(med => med._id === Juguete._id)
+            this.carrito.splice(index, 1)
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
         }
     },
     computed: {
@@ -60,7 +69,6 @@ const app = createApp({
             let ordenarPor;
             switch (this.seleccionada) {
                 case 'A-Z':
-                    console.log('holaa')
                     this.juguetesFiltrados = this.juguetesFiltrados.sort((a, b) => a.nombre.localeCompare(b.nombre))
                     break;
                 case 'Mayor precio':

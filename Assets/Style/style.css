@@ -176,6 +176,133 @@ footer{
 }
 /* fin footer */
 
+/* Inicio Formulario */
+
+.contact_form{  
+    width: 480px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+    box-shadow: #f35e59 3px 3px 3px 3px;
+}
+
+input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #f27874; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+.mascotas-Contenedor{
+    display: table-column;
+}
+
+.input-Mascotas{
+    width: 100px;
+    height: 20px; 
+}
+
+
+textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #f27874; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+}
+
+label{
+    display: block; 
+    float: center;  
+}
+
+#enviar{
+    height: 50px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #fc7e7a; 
+    border-color: #c44641; 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+}
+
+button p{
+    color: #fff; 
+}
+
+span{
+    color: #c44641; 
+}
+
+.aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+}
+
+.formulario-titulo{
+    font-size: 39px; 
+    margin-right: 2rem;
+    text-align: center; 
+    padding-bottom: 20px; 
+    color: #f35e59;
+}
+
+h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0e0e0e;   
+}
+
+p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+}
+
+.enviar{
+    margin-top: 10px !important;
+}
+
+::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+}
+
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+.formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+/* Fin Formulario */
+
 /*inicio estilo farmacia y juguetes */
 body {
     min-height: 100vh;
@@ -228,12 +355,13 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 2rem;
     height: 29rem;
-  }
-  .card-img-top{
+}
+
+.card-img-top{
     object-fit: cover;
     max-height: 50%;
     border-radius: 20px;
-  }
+}
 
 /* estilo h1 */
 .titulo-tienda{
@@ -251,7 +379,7 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-  }
+}
 
 /* estilo searchbar y filtro */
 .search-bar{
@@ -290,10 +418,16 @@ body {
     footer, iframe{
         width: 100%;
     }
-    /* fin responsive tienda */
+    .ancor-nav{
+        font-size: 12px !important;
+    }
+    .imagenes-Carrusel{
+        height: 15em;
+    }
 }
+    /* fin responsive tienda */
 @media screen and (min-width: 401px) and (max-width: 1132px) {
-   /*  inicio responsive mobile & tablet*/
+    /*  inicio responsive mobile & tablet*/
     .search-bar{
         margin-top: 5rem;
     }
