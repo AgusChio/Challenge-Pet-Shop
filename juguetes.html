@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Juguetes</title>
+</head>
+<body id="app" class="d-flex flex-column" >
+    <header>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <nav class="navbar bg-dark justify-content-center">
+            <div class="nav-content justify-content-center">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
+                    <li class="nav-item"><a class="nav-link logo" href="#"><div class="wrapper bg-dark"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
+                </ul>
+               
+            </div>
+        </nav>
+    </header>
+    <div class="dropdown">
+        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./assets/shopping-cart-outline-svgrepo-com.svg" alt="shopping icon" width="35" height="30">
+        </button>
+        <div class="dropdown-menu">
+            <div class="card menu-item" style="width: 15rem;" v-for="juguete of carrito">
+                <img :src="juguete.imagen" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{juguete.nombre}}</h5>
+                  <p>Precio: ${{juguete.precio}}</p>
+                  <div class="d-flex unidades">
+                    <p>Unidades: {{juguete.unidades}}</p>
+                    <button class="btn btn-primary" @click="quitarUnidad(juguete)">Quitar unidad</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="d-flex flex-column align-items-center justify-content-center">
+            {{filtrar}}
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+            v-model="textoInput" @keyup="filtrarjuguetes">
+            <select class="form-select" aria-label="Default select example" v-model="seleccionada">
+                <option disabled value="">Ordenar</option>
+                <option>A-Z</option>
+                <option>Mayor precio</option>
+                <option>Menor precio</option>
+            </select>
+            <div class="cards d-flex justify-content-center flex-wrap">
+                <div class="card" style="width: 18rem;" v-for="juguete of juguetesFiltrados">
+                    <img :src="juguete.imagen" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{juguete.nombre}}</h5>
+                        <p>Precio: ${{juguete.precio}}</p>
+                        <p class="text-danger" v-if="juguete.stock <=5">Ultimas unidades!!!</p>
+                        <button class="btn btn-primary" @click="agregarAlCarrito(juguete)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./juguetes.js"></script>
+</body>
+</html>
