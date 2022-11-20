@@ -1,10 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
-}
-
-.form-control, .form-select {
-    width: 25% !important;
+    padding: 0;    
 }
 
 body {
@@ -17,7 +13,11 @@ body {
 }
 
 /* Navbar */
+main{
+    font-family: 'Poppins', sans-serif;
+}
 
+/* inicio logo navbar */
 .logo {
     position: relative;
     width: 4.5em;
@@ -40,12 +40,13 @@ body {
     padding: 0.9em;
     z-index: 3;
 }
+/* fin logo navbar */
 
 .navbar{
     border-bottom: 2px #F5A09D solid;
 }
 .nav li{
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', sans-serif !important;
     font-weight: bold;
 }
 
@@ -63,15 +64,32 @@ body {
 .ancor-nav:hover, .ancor-nav:focus {
     background-size: 100% 2px 
 }
+/* fin navbar */
 
 
-/* Carrusel */
-
+/* Inicio Carrusel */
 .imagenes-Carrusel{
     z-index: 2;
-    height: 65vh;
+    height: 70vh;
     object-fit: cover;
 }
+
+.carousel-caption{
+    background-color: rgba(240, 255, 255, 0.099);
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bold;
+}
+.carousel-caption>h5{
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bold;
+}
+/* Fin Carrusel */
 
 /* Main */
 
@@ -79,7 +97,7 @@ body {
     margin-bottom: 50px;
     text-transform: uppercase;
 }
-
+/* inicio estilo cartas productos*/
 .card-block {
     font-size: 1em;
     position: relative;
@@ -98,138 +116,46 @@ body {
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
     margin-top:20px;
 }
-
-.btn {
-    margin-top: auto;
+.card-title{
+    font-weight: bold;
 }
-
-/* Formulario */
-
-.contact_form{  
-    width: 480px; 
-    height: auto;
-    margin: 80px auto;
-    border-radius: 10px;  
-    padding-top: 30px;
-    padding-bottom: 20px;  
-    background-color: #fbfbfb; 
-    padding-left: 30px; 
-    box-shadow: #f35e59 3px 3px 3px 3px;
+.img-carta{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
+.card-block>a{
 
-input{
-    background-color: #fbfbfb; 
-    width: 408px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: #f27874; 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
+    font-weight: bold;
+    background-color:rgb(240,162,79);
 }
+/* fin estilo cartas productos */
 
-.mascotas-Contenedor{
-    display: table-column;
+/* inicio estilo mapa de la pagina de inicio */
+.maps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    
 }
-
-.input-Mascotas{
-    width: 100px;
-    height: 20px; 
+.maps>h3{
+    margin: 2vh;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
-
-
-textarea{
-    background-color: #fbfbfb; 
-    width: 405px; 
-    height: 150px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: #f27874; 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-    padding-top: 15px; 
+iframe{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 60vw;
+    height: 70vh;
 }
+/* fin estilo mapa */
 
-label{
-    display: block; 
-    float: center;  
-}
-
-button{
-    height: 50px; 
-    padding-left: 5px;
-    padding-right: 5px;   
-    margin-bottom: 20px; 
-    margin-top: 10px;   
-    text-transform: uppercase;
-    background-color: #fc7e7a; 
-    border-color: #c44641; 
-    border-style: solid; 
-    border-radius: 10px;  
-    width: 420px;   
-    cursor: pointer;
-}
-
-button p{
-    color: #fff; 
-}
-
-span{
-    color: #c44641; 
-}
-
-.aviso{
-    font-size: 13px;  
-    color: #0e0e0e;  
-}
-
-h1{
-    font-size: 39px; 
-    margin-right: 2rem;
-    text-align: center; 
-    padding-bottom: 20px; 
-    color: #f35e59;
-}
-
-h3{
-    font-size: 16px; 
-    padding-bottom: 30px;
-    color: #0e0e0e;   
-}
-
-p{
-    font-size: 14px; 
-    color: #0e0e0e; 
-}
-
-.enviar{
-    margin-top: 10px !important;
-}
-
-::-webkit-input-placeholder {
-    color: #a8a8a8;
-}
-
-::-webkit-textarea-placeholder {
-    color: #a8a8a8;
-}
-
-.formulario input:focus{
-    outline:0;
-    border: 1px solid #97d848;
-}
-
-.formulario textarea:focus{
-    outline:0;
-    border: 1px solid #97d848;
-}
-
-
-/* Footer */
+/* Inicio Footer */
 
 .LogosFooter{
     width: 1rem;
@@ -241,18 +167,135 @@ p{
 .botones{
     border-radius: 40%;
 }
-
 .enlaces{
     color: white !important;
 }
-
 footer{
     font-family: 'Poppins', sans-serif;
     margin-top: 3rem;
 }
+/* fin footer */
 
-.sobreNosotros{
-    color: #fff;
+/*inicio estilo farmacia y juguetes */
+body {
+    min-height: 100vh;
+}
+#app {
+    min-height: 100vh;
 }
 
+/*inicio menu dropdown carrito*/
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-self: flex-end;
+}
+.dropdown-menu:before {
+    position: absolute;
+    top: -7px;
+    left: 9px;
+    display: inline-block;
+    content: '';
+}
+.dropdown-menu::after {
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    content: '';
+}
 
+/* inicio estilo boton de carrito - tiene mediaquery */
+.carrito-position{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn-carrito{    
+    font-family: 'Fjalla One', sans-serif !important;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    height: 3rem;
+}
+/* fin estilo boton de carrito */
+
+/* estilo cards */
+.cards-producto {
+    width: 18rem;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 2rem;
+    height: 29rem;
+  }
+  .card-img-top{
+    object-fit: cover;
+    max-height: 50%;
+    border-radius: 20px;
+  }
+
+/* estilo h1 */
+.titulo-tienda{
+    font-family: 'Fjalla One', sans-serif !important;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+/* boton naranja de "agregar a carrito" */
+.btn-tienda{
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:rgb(240,162,79);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+/* estilo searchbar y filtro */
+.search-bar{
+    margin-top: 4rem !important;
+}
+.search-bar, .search-filter{
+    margin: 1rem;
+    justify-content: center !important;
+    width: 70% !important;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* MEDIAQUERRYS */
+@media screen and (min-width: 319px) and (max-width: 400px) {
+    
+    /* inicio responsive tienda mobile */
+    .search-bar{
+        margin-top: 5rem !important;
+    }
+    .titulo-tienda{
+        text-align: center !important;
+        right: 28% !important;
+        margin-left: 30px;
+    }
+    .carrito-position{
+        position: absolute;
+        align-items: center;
+        top: 28% !important;
+        right: 28% !important;
+        z-index: 2;
+        margin: auto;
+        text-align: center;  
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    footer, iframe{
+        width: 100%;
+    }
+    /* fin responsive tienda */
+}
+@media screen and (min-width: 401px) and (max-width: 1132px) {
+   /*  inicio responsive mobile & tablet*/
+    .search-bar{
+        margin-top: 5rem;
+    }
+        /* fin responsive tienda */
+}
