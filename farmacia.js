@@ -17,6 +17,10 @@ const app = createApp({
                 this.obtenerMedicamentos(data.response)
             })
             .catch(err => console.log(err))
+        this.carrito = JSON.parse(localStorage.getItem('carrito'))
+        if (!this.carrito) {
+            this.carrito = []
+        }
     },
     methods: {
         obtenerMedicamentos(data) {
@@ -45,7 +49,7 @@ const app = createApp({
                 medicamento.unidades = 1
                 this.carrito.push(medicamento)
             }
-            console.log(this.carrito)
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
         },
         quitarUnidad(medicamento) {
             const index = this.carrito.findIndex(med => med._id === medicamento._id)
@@ -53,6 +57,12 @@ const app = createApp({
             if (!this.carrito[index].unidades) {
                 this.carrito.splice(index,1)
             }
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
+        },
+        quitarElemento(medicamento) {
+            const index = this.carrito.findIndex(med => med._id === medicamento._id)
+            this.carrito.splice(index, 1)
+            localStorage.setItem('carrito', JSON.stringify(this.carrito))
         }
     },
     computed: {

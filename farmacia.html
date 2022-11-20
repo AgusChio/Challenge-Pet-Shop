@@ -22,8 +22,8 @@
             </div>
         </nav>
     </header>
-    <div class="dropdown">
-        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <div class="dropdown"  onclick="event.stopPropagation()">
+        <button class="btn" type="button" data-bs-toggle="dropdown"  aria-expanded="false" >
             <img src="./assets/shopping-cart-outline-svgrepo-com.svg" alt="shopping icon" width="35" height="30">
         </button>
         <div class="dropdown-menu">
@@ -35,9 +35,11 @@
                   <div class="d-flex unidades">
                     <p>Unidades: {{medicamento.unidades}}</p>
                     <button class="btn btn-primary" @click="quitarUnidad(medicamento)">Quitar unidad</button>
+                    <button class="btn btn-danger" @click="quitarElemento(medicamento)">Quitar elemento</button>
                   </div>
                 </div>
             </div>
+            <h5 v-if="!carrito.length" style="text-align: center;">Su carrito se encuentra vacio</h5>
         </div>
     </div>
     <main>
