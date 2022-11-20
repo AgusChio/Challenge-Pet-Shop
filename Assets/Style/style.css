@@ -73,13 +73,6 @@ body {
     object-fit: cover;
 }
 
-.carousel-caption{
-    background-color: rgba(240, 255, 255, 0.099);
-    display: grid;
-    place-items: center;
-    font-family: 'Poppins', sans-serif;
-}
-
 /* Main */
 
 .title {
@@ -110,15 +103,156 @@ body {
     margin-top: auto;
 }
 
+/* Formulario */
+
+.contact_form{  
+    width: 480px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+    box-shadow: #f35e59 3px 3px 3px 3px;
+}
+
+input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #f27874; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+.mascotas-Contenedor{
+    display: table-column;
+}
+
+.input-Mascotas{
+    width: 100px;
+    height: 20px; 
+}
+
+
+textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #f27874; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+}
+
+label{
+    display: block; 
+    float: center;  
+}
+
+button{
+    height: 50px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #fc7e7a; 
+    border-color: #c44641; 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+}
+
+button p{
+    color: #fff; 
+}
+
+span{
+    color: #c44641; 
+}
+
+.aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+}
+
+h1{
+    font-size: 39px; 
+    margin-right: 2rem;
+    text-align: center; 
+    padding-bottom: 20px; 
+    color: #f35e59;
+}
+
+h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0e0e0e;   
+}
+
+p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+}
+
+.enviar{
+    margin-top: 10px !important;
+}
+
+::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+}
+
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+.formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
 
 /* Footer */
 
 .LogosFooter{
-    width: 18px;
+    width: 1rem;
+    height: 1rem;
+}
+.LogosFooter>img{
+    justify-items: center;
+}
+.botones{
+    border-radius: 40%;
 }
 
-.botones{
-    border-radius: 50%;
+.enlaces{
+    color: white !important;
+}
+
+footer{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 3rem;
+}
+
+.sobreNosotros{
+    color: #fff;
 }
 
 
