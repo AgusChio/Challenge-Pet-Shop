@@ -192,7 +192,7 @@ footer{
 
 input{
     background-color: #fbfbfb; 
-    width: 408px; 
+    width: 430px; 
     height: 40px; 
     border-radius: 5px;  
     border-style: solid; 
@@ -208,14 +208,14 @@ input{
 }
 
 .input-Mascotas{
-    width: 100px;
+    width: fit-content;
     height: 20px; 
 }
 
 
 textarea{
     background-color: #fbfbfb; 
-    width: 405px; 
+    width: 430px; 
     height: 150px; 
     border-radius: 5px;  
     border-style: solid; 
@@ -392,9 +392,109 @@ body {
     align-self: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+/* estilo compra */
+
+.contenedor-compra {
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.canasta{
+    width: 60%;
+    border: 1px #c44641 solid;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20%;
+    box-shadow: #f27874be 3px 3px 3px 3px;
+}
+
+.canasta-labels ul{
+    border-bottom: gray solid 1px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-left: -10px;
+    padding-bottom: 10px;
+}
+
+.canasta-labels ul li{
+    display: inline;
+    text-align: center;
+    width: 15%;
+}
+
+.detalles-productos ul{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+
+.detalles-productos ul li{
+    display: inline;
+    text-align: center;
+    height: 10vh;
+    width: 15%;
+    align-content: center;
+
+}
+
+.cantidadProducto{
+    width: 50%;
+    height: 4vh;
+}
+
+.contenedor-remover{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.boton-remover{
+    padding: 5px;
+    border: none;
+    background-color: #f27874;
+    color: white;
+}
+
+aside{
+    padding-left: 1.5rem;
+}
+
+.contenedor-aside{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: #f35e59 2px solid;
+    box-shadow: #f27874aa 3px 3px 3px 3px;
+}
+
+.sumaTotal-Articulos{
+    font-size: 20px;
+    border-bottom: #a8a8a8 solid 1px;
+    padding-bottom: 5px;
+}
+
+.promo-Titulo{
+    padding-bottom: 5px;
+}
+
+.boton-checkout{
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #f27874;
+    border-radius: 10px;
+}
 
 /* MEDIAQUERRYS */
-@media screen and (min-width: 319px) and (max-width: 400px) {
+@media screen and (min-width: 319px) and (max-width: 460px) {
     
     /* inicio responsive tienda mobile */
     .search-bar{
@@ -407,13 +507,9 @@ body {
     }
     .carrito-position{
         position: absolute;
-        align-items: center;
-        top: 28% !important;
-        right: 28% !important;
+        top: 35% !important;
+        right: 30% !important;
         z-index: 2;
-        margin: auto;
-        text-align: center;  
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     footer, iframe{
         width: 100%;
@@ -424,12 +520,211 @@ body {
     .imagenes-Carrusel{
         height: 15em;
     }
+    .contact_form{  
+        width:300px; 
+        height: auto;
+    }
+
+    textarea{
+        width: fit-content; 
+    }
+    input{
+        width: fit-content; 
+    }
+
+    #enviar{
+        width: 240px;
+    }
+
+ /* responsive fin compras */
+
+    .contenedor-compra {
+        padding: 10px;
+        padding-top: 30px;
+    }
+    .canasta{
+        width:140%;
+        height: fit-content;
+        margin-bottom: 20%;
+        font-size: 14px;
+    }
+    
+    .canasta-labels ul li{
+        margin-right: 19px;
+    }
+
+    .detalles-productos ul{
+        margin-right: 30px; 
+        margin-top: 10px;
+    }    
+    
+    .cantidadProducto{
+        width: 90%;
+        height: 6vh;
+    }
+
+    aside{
+        padding-left: 0rem;
+    }
+    
+    .contenedor-aside{
+        width: 100%;
+    }
+    
+    .summary-delivery-selection{
+        width: 100%;
+    }
 }
-    /* fin responsive tienda */
-@media screen and (min-width: 401px) and (max-width: 1132px) {
+
+@media screen and (min-width: 393px) and (max-width: 394px) {
+    .carrito-position{
+        position: absolute;
+        top: 18% !important;
+        right: 32% !important;
+        z-index: 2;
+    }
+    .ancor-nav{
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 414px) {
+    .carrito-position{
+        position: absolute;
+        top: 20% !important;
+        right: 32% !important;
+        z-index: 2;
+    }
+    .ancor-nav{
+        font-size: 11px !important;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 376px) {
+    .carrito-position{
+        position: absolute;
+        top: 22% !important;
+        right: 32% !important;
+        z-index: 2;
+    }
+}
+
+
+@media screen and (min-width: 428px) and (max-width: 429px) {
+    .carrito-position{
+        position: absolute;
+        top: 18% !important;
+        right: 32% !important;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 412px) and (max-width: 413px) {
+    .carrito-position{
+        position: absolute;
+        top: 17% !important;
+        right: 34% !important;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 801px) {
+    .carrito-position{
+        position: absolute;
+        top: 17% !important;
+        right: 34% !important;
+        z-index: 2;
+    }
+
+    .contenedor-compra {
+        padding: 10px;
+        padding-top: 30px;
+    }
+    .canasta{
+        width:140%;
+        height: fit-content;
+        margin-bottom: 10%;
+        font-size: 14px;
+    }
+    
+    .canasta-labels ul li{
+        margin-right: 19px;
+    }
+
+    .detalles-productos ul{
+        margin-right: 30px; 
+        margin-top: 10px;
+    }    
+    
+    .cantidadProducto{
+        width: 50%;
+        height: 4vh;
+    }
+
+    aside{
+        padding-left: 11rem;
+        margin-bottom: 13%;
+    }
+    
+    .contenedor-aside{
+        width: 100%;
+    }
+    
+    .summary-delivery-selection{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 460px) and (max-width: 1132px) {
     /*  inicio responsive mobile & tablet*/
     .search-bar{
         margin-top: 5rem;
+    }
+    .imagenes-Carrusel{
+        height: 40em;
+    }
+    .carrito-position{
+        position: absolute;
+        top: 13% !important;
+        z-index: 2;
+    }
+
+
+    .contenedor-compra {
+        padding: 10px;
+        padding-top: 30px;
+    }
+    .canasta{
+        width:140%;
+        height: fit-content;
+        margin-bottom: 6%;
+        font-size: 14px;
+    }
+    
+    .canasta-labels ul li{
+        margin-right: 19px;
+    }
+
+    .detalles-productos ul{
+        margin-right: 30px; 
+        margin-top: 10px;
+    }    
+    
+    .cantidadProducto{
+        width: 50%;
+        height: 4vh;
+    }
+
+    aside{
+        padding-left: 11rem;
+    }
+    
+    .contenedor-aside{
+        width: 100%;
+    }
+    
+    .summary-delivery-selection{
+        width: 100%;
     }
         /* fin responsive tienda */
 }
